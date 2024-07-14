@@ -1,0 +1,9 @@
+POST http://localhost:3001/send-email
+Content-Type: application/json 
+
+{
+    "name":"hunt",
+    "email":"mail.com",
+    "number":4566578,
+    "message":"new msg"
+}
