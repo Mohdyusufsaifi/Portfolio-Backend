@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require("cors");
+const port = process.env.PORT || 4000;
 
 app.use(bodyParser.urlencoded());
 app.use(express.json())
@@ -36,14 +37,14 @@ app.post('/send-email', async (req, res) => {
     if (error) {
         res.status(400).json({message:error});
     } else {
-        res.status(200).json({message:"message successfully sended"})
+        res.status(200).json({message:"Message Successfully Sended"})
     }
 })
 });
 
 
 
-app.listen(3001, () => {
-  console.log('Server is running on port 3001');
+app.listen(port, () => {
+  console.log('Server is running');
 });
 
